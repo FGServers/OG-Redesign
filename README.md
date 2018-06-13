@@ -3,6 +3,7 @@ Support: Coming soon
 Live Server: http://ogr.programarg.com/  
 
 Require XGPVer >= 3.1.0
+
 Require PHP >= 5.4  
 Require MySQLi >= 5.0.0  
 
