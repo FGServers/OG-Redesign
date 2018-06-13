@@ -346,9 +346,9 @@ class TemplateLib
     {
         $parse = $this->langs;
         $parse['meta_tags'] = ($metatags) ? $metatags : "";
-        $parse['css'] = CSS_PATH;
-        $parse['img'] = IMG_PATH;
-        $parse['js'] = JS_PATH;
+        $parse['css_path'] = CSS_PATH;
+        $parse['img_path'] = IMG_PATH;
+        $parse['js_path'] = JS_PATH;
         $parse['game_lang'] = $this->langs['lang'];
         $parse['game_universe'] = strtr($this->langs['ge_username'], ['%s' => $this->current_user['user_name']]);
         $parse['game_session'] = sha1($this->current_user['user_name']);
