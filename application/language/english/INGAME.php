@@ -9,7 +9,14 @@ $lang['Messages'] = 'Messages';
 $lang['write_message'] = 'Write Message';
 $lang['ge_home_planet'] = 'Homeworld';
 $lang['ge_colony'] = 'Colony';
-
+$lang['ge_welcome_ogproyect'] = 'Welcome to OGProyect!';
+$lang['ge_username'] = 'To help your game start get moving quickly, we’ve assigned you the name %s. You can change this at any time by clicking on the username.<br />
+Fleet Command has left you information on your first steps in your inbox, to help you be well-equipped for your start.<br />
+<br />
+Have fun playing!';
+$lang['ge_error_js'] = 'Please activate JavaScript to continue with the game.';
+$lang['ge_outdate_browser'] = 'Your currently used browser is outdated and may cause display errors on this website. Please update your browser to a newer version: <a href="http://www.microsoft.com/upgrade/">Internet Explorer</a> o <a href="http://www.mozilla-europe.org/de/firefox/">Mozilla Firefox</a>';
+$lang['lang'] = 'en';
 $lang['online'] = 'Online';
 $lang['minutes'] = '15 min';
 $lang['offline'] = 'Offline';
@@ -31,6 +38,12 @@ $lang['user_level'] = array(
     '2' => 'Operator',
     '3' => 'Administrator',
 );
+
+$lang['game_planet_type'] = [
+    '1' => 'planet',
+    '3' => 'moon'
+];
+
 
 //SHORT NAMES FOR COMBAT REPORTS
 $lang['tech_rc'] = array(

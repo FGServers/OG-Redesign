@@ -9,7 +9,14 @@ $lang['Messages'] = 'Mensajes';
 $lang['write_message'] = 'Escribir mensaje';
 $lang['ge_home_planet'] = 'Planeta Principal';
 $lang['ge_colony'] = 'Colonia';
-
+$lang['ge_welcome_ogproyect'] = '¡Te damos la bienvenida a OGProyect!';
+$lang['ge_username'] = 'Hemos escogido el nombre %s para que puedas empezar ya mismo. Cambiarlo es posible en cualquier momento: solo tienes que hacer clic sobre tu nombre de usuario.<br />
+El equipo de comando te ha enviado información sobre los primeros pasos a la bandeja de entrada. ¡Échale un vistazo para empezar con buen pie!<br />
+<br />
+¡Que disfrutes jugando!';
+$lang['ge_error_js'] = 'Por favor, activá JavaScript para poder continuar con el juego.';
+$lang['ge_outdate_browser'] = 'El navegador usado actualmente es antiguo y puede causar errores en la pantalla de esta página web. Por favor, actualiza tu navegador a la versión más nueva: <a href="http://www.microsoft.com/upgrade/">Internet Explorer</a> o <a href="http://www.mozilla-europe.org/de/firefox/">Mozilla Firefox</a>';
+$lang['lang'] = 'es';
 $lang['online'] = 'Conectado';
 $lang['minutes'] = '15 min';
 $lang['offline'] = 'Desconectado';
@@ -31,6 +38,11 @@ $lang['user_level'] = array(
     '2' => 'Operador',
     '3' => 'Administrador',
 );
+
+$lang['game_planet_type'] = [
+    '1' => 'planeta',
+    '3' => 'luna'
+];
 
 //SHORT NAMES FOR COMBAT REPORTS
 $lang['tech_rc'] = array(

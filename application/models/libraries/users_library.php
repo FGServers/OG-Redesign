@@ -215,7 +215,9 @@ class Users_library
                 usul.user_statistic_total_rank,
                 usul.user_statistic_total_points,
                 r.*,
+                a.alliance_id,
                 a.alliance_name,
+                a.alliance_tag,
                 (SELECT COUNT(`message_id`) AS `new_message` 
                 FROM `" . MESSAGES . "` 
                 WHERE `message_receiver` = u.`user_id` AND `message_read` = 0) AS `new_message`

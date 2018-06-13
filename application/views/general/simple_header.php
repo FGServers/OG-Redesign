@@ -3,26 +3,26 @@
     <head>
         <link rel="apple-touch-icon" href="{img_path}icons/iphone_icon.png"/>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-<meta http-equiv="Language" content=""/>
-<meta name="xgproyect-session" content=""/>
-<meta name="xgproyect-version" content="{version}"/>
-<meta name="xgproyect-timestamp" content=""/>
-<meta name="xgproyect-universe" content=""/>
-<meta name="xgproyect-universe-name" content=""/>
-<meta name="xgproyect-universe-speed" content=""/>
-<meta name="xgproyect-universe-speed-fleet" content=""/>
-<meta name="xgproyect-language" content=""/>
-<meta name="xgproyect-donut-galaxy" content=""/>
-<meta name="xgproyect-donut-system" content=""/>
-<meta name="xgproyect-player-id" content=""/>
-<meta name="xgproyect-player-name" content=""/>
-<meta name="xgproyect-alliance-id" content=""/>
-<meta name="xgproyect-alliance-name" content=""/>
-<meta name="xgproyect-alliance-tag" content=""/>
-<meta name="xgproyect-planet-id" content=""/>
-<meta name="xgproyect-planet-name" content=""/>
-<meta name="xgproyect-planet-coordinates" content=""/>
-<meta name="xgproyect-planet-type" content=""/>
+        <meta http-equiv="Language" content="{lang}"/>
+<meta name="xgproyect-session" content="{game_session}"/>
+<meta name="xgproyect-version" content="{game_version}"/>
+<meta name="xgproyect-timestamp" content="{game_time}"/>
+<meta name="xgproyect-universe" content="{game_universe_url}"/>
+<meta name="xgproyect-universe-name" content="{game_universe_name}"/>
+<meta name="xgproyect-universe-speed" content="{game_universe_speed}"/>
+<meta name="xgproyect-universe-speed-fleet" content="{game_universe_speed_fleet}"/>
+<meta name="xgproyect-language" content="{game_lang}"/>
+<meta name="xgproyect-donut-galaxy" content="1"/>
+<meta name="xgproyect-donut-system" content="1"/>
+<meta name="xgproyect-player-id" content="{game_player_id}"/>
+<meta name="xgproyect-player-name" content="{game_player_name}"/>
+<meta name="xgproyect-alliance-id" content="{game_player_alliance_id}"/>
+<meta name="xgproyect-alliance-name" content="{game_player_alliance_name}"/>
+<meta name="xgproyect-alliance-tag" content="{game_player_alliance_tag}"/>
+<meta name="xgproyect-planet-id" content="{game_player_planet_id}"/>
+<meta name="xgproyect-planet-name" content="{game_player_planet_name}"/>
+<meta name="xgproyect-planet-coordinates" content="{game_player_planet_cord}"/>
+<meta name="xgproyect-planet-type" content="{game_player_planet_type}"/>
 <!--[if (gt IE 9)|!(IE)]><!-->
 <link rel="stylesheet" type="text/css" href="{css_path}ogame.css" media="screen" />
 <!--<![endif]-->
@@ -74,10 +74,7 @@
           class="ogame lang-ar default no-touch"
     >
         <div id="initial_welcome_dialog" title="¡Te damos la bienvenida a OGame!" style="display: none;">
-            Hemos escogido el nombre JonaMiX para que puedas empezar ya mismo. Cambiarlo es posible en cualquier momento: solo tienes que hacer clic sobre tu nombre de usuario.<br />
-El equipo de comando te ha enviado información sobre los primeros pasos a la bandeja de entrada. ¡Échale un vistazo para empezar con buen pie!<br />
-<br />
-¡Que disfrutes jugando!        </div>
+            {game_universe}</div>
                 <div class="contentBoxBody">
             <noscript>
                 <div id="messagecenter">

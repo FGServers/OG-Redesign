@@ -58,7 +58,7 @@ class TemplateLib
      *
      * @return void
      */
-    public function display($current_page, $topnav = true, $metatags = '', $menu = true)
+    public function display($current_page, $header = true, $topnav = true, $metatags = '', $menu = true)
     {
         $page = '';
 
@@ -98,7 +98,7 @@ class TemplateLib
         // Anything else
         if ($page == '') {
 
-            $page .= $this->gameHeader($metatags);
+            $page .= $header ? $this->gameHeader($metatags) : ''; // HEADER
             $page .= $topnav ? $this->gameNavbar() : ''; // TOP NAVIGATION BAR
             $page .= $menu ? $this->gameMenu() : ''; // MENU
         }
@@ -344,12 +344,31 @@ class TemplateLib
      */
     private function gameHeader($metatags = '')
     {
-        $parse['game_title'] = FunctionsLib::readConfig('game_name');
-        $parse['version'] = SYSTEM_VERSION;
-        $parse['css_path'] = CSS_PATH;
-        $parse['skin_path'] = DPATH;
-        $parse['js_path'] = JS_PATH;
+        $parse = $this->langs;
         $parse['meta_tags'] = ($metatags) ? $metatags : "";
+        $parse['css'] = CSS_PATH;
+        $parse['img'] = IMG_PATH;
+        $parse['js'] = JS_PATH;
+        $parse['game_lang'] = $this->langs['lang'];
+        $parse['game_universe'] = strtr($this->langs['ge_username'], ['%s' => $this->current_user['user_name']]);
+        $parse['game_session'] = sha1($this->current_user['user_name']);
+        $parse['game_version'] = SYSTEM_VERSION;
+        $parse['game_time'] = time();
+        $parse['game_universe_url'] = BASE_URL;
+        $parse['game_universe_name'] = FunctionsLib::readConfig('game_name');
+        $parse['game_universe_speed'] = FormatLib::prettyGameRate(FunctionsLib::readConfig('game_speed'));
+        $parse['game_universe_speed_fleet'] = FormatLib::prettyGameRate(FunctionsLib::readConfig('fleet_speed'));
+        $parse['game_player_id'] = $this->current_user['user_id'];
+        $parse['game_player_name'] = $this->current_user['user_name'];
+        $parse['game_player_alliance_id']  = ($this->current_user['user_ally_id'] != 0) ? $this->current_user['alliance_id'] : '';
+        $parse['game_player_alliance_name']= ($this->current_user['user_ally_id'] != 0) ? $this->current_user['alliance_name'] : '';
+        $parse['game_player_alliance_tag'] = ($this->current_user['user_ally_id'] != 0) ? $this->current_user['alliance_tag'] : '';
+        $parse['game_player_planet_id'] = $this->current_planet['planet_id'];
+        $parse['game_player_planet_name'] = $this->current_planet['planet_name'];
+        $parse['game_player_planet_cord'] = FormatLib::prettyCoords($this->current_planet['planet_galaxy'], $this->current_planet['planet_system'],  $this->current_planet['planet_planet']);
+        $parse['game_player_planet_type'] = $this->langs['game_planet_type'][$this->current_planet['planet_type']];
+        $parse['current_page'] = $this->current_planet['planet_type'] == 3 && $this->current_page == "station" ? $this->current_page . '-moon' : $this->current_page;
+        $parse['commander_status'] = OfficiersLib::isOfficierActive($this->current_user['premium_officier_commander']) ? '' : 'no-commander';
 
         return $this->parseTemplate($this->getTemplate('general/simple_header'), $parse);
     }
