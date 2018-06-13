@@ -73,20 +73,20 @@
     <body id="overview"
           class="ogame lang-ar default no-touch"
     >
-        <div id="initial_welcome_dialog" title="¡Te damos la bienvenida a OGame!" style="display: none;">
+        <div id="initial_welcome_dialog" title="{ge_welcome_ogproyect}" style="display: none;">
             {game_universe}</div>
                 <div class="contentBoxBody">
             <noscript>
                 <div id="messagecenter">
                     <div id="javamessagebox">
                         <span class="overmark">
-                            <strong>Por favor, activá JavaScript para poder continuar con el juego.</strong>
+                            <strong>{ge_error_js}</strong>
                         </span>
                     </div>
                 </div>
             </noscript>
             <div id="ie_message">
-                <p><img src="{img_path}icons/info.gif" height="16" width="16" />El navegador usado actualmente es antiguo y puede causar errores en la pantalla de esta página web. Por favor, actualiza tu navegador a la versión más nueva: <a href="http://www.microsoft.com/upgrade/">Internet Explorer</a> o <a href="http://www.mozilla-europe.org/de/firefox/">Mozilla Firefox</a></p>
+                <p><img src="{img_path}icons/info.gif" height="16" width="16" />{ge_outdate_browser}</p>
             </div>
             <script type="text/javascript">isIE = false;</script>
             <!--[IF IE]>
