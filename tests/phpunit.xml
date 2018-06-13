@@ -1,0 +1,17 @@
+<phpunit bootstrap="bootstrap.php" colors="true">
+    <testsuites>
+        <testsuite name="xgp_application">
+            <directory>application/</directory>
+        </testsuite>
+    </testsuites>
+    
+    <logging>
+        <log type="testdox-html" target="build/logs/testdox.html"/>
+    </logging>
+    
+    <filter>
+        <whitelist>
+            <directory>application/</directory>
+        </whitelist>
+    </filter>
+</phpunit>
